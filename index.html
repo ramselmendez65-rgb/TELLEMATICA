@@ -337,38 +337,7 @@
       <p>Tel: 55-364-09-503 Ext: 255 Whats: 56-32-17-99-52</p>
     </div>
    <!-- Buscador -->
-<div style="text-align:center; margin: 20px 0;">
-  <input type="text" id="searchInput" placeholder="Buscar..." 
-         style="padding:10px 15px; width:70%; max-width:400px; border-radius:5px; border:1px solid #ccc; font-size:16px;">
-  <button id="clearButton" 
-          style="padding:10px 15px; margin-left:10px; border-radius:5px; border:none; background:#5a1f26; color:white; font-size:16px; cursor:pointer;">
-    Borrar
-  </button>
-</div>
 
-<script>
-  const searchInput = document.getElementById('searchInput');
-  const clearButton = document.getElementById('clearButton');
-
-  function filterSections() {
-    const filter = searchInput.value.toLowerCase();
-    const sections = document.querySelectorAll('.horarios, .Listas, .Documentos, .MapasCurriculares, .Aulas');
-
-    sections.forEach(section => {
-      const text = section.textContent.toLowerCase();
-      section.style.display = text.includes(filter) ? 'block' : 'none';
-    });
-  }
-
-  // Evento para escribir en el buscador
-  searchInput.addEventListener('input', filterSections);
-
-  // Evento para limpiar el buscador
-  clearButton.addEventListener('click', () => {
-    searchInput.value = '';
-    filterSections(); // Muestra todas las secciones otra vez
-  });
-</script>
 
 
     <div class="video-container">
@@ -1486,4 +1455,5 @@
 
 </body>
 </html> 
+
 
